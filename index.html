@@ -1,15 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="C:\Users\002YFV744\Desktop\Interesting Reads\HTMLCSS\Glitch\styles.css">
-    </head>
-<body class="story1Body">
-    <p class="story1">This happened last spring, or maybe late winter, it's getting really hard to nail down but it was definitely this year.
+<html>
+<head>
+    <title>Sidebar Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #sidebar {
+            height: 100vh;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        #sidebar a {
+            padding: 10px 15px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+        #sidebar a:hover {
+            background-color: #ddd;
+        }
+        #content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: calc(100vh - 40px);
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <a href="home.html" target="content">Home</a>
+        <a href="about.html" target="content">About</a>
+        <a href="contact.html" target="content">Contact</a>
+    </div>
 
-        I was out walking the foster dog on an overcast day, totally routine and thinking random thoughts, but mostly hoping he wouldn't see a cat so that we could just wrap things up without a dog rodeo. He's a big dog.
-        
-        So, walking the dog, gray day, taking in the quiet and I'm staring straight ahead as one of the trees ahead of me disappears. As it happens I also feel off, like a sudden pressure change in a plane. I immediately feel like I saw something I shouldn't have, recognize the weirdness of that particular thought and know that no one will believe me if I ask about a random tree. Plus, it just sounds nuts, even as I'm thinking it. It was a lot at once, in what must have been only a few seconds.
-        
-        This particular tree was one of several along the driveway, but still off to the side a bit on its own. It's not like I was staring into the woods and shifted focus. I'm still conscious of its absence and it's super frustrating.</p>
+    <div id="content">
+        <iframe name="content" src="home.html"></iframe>
+    </div>
 </body>
 </html>
