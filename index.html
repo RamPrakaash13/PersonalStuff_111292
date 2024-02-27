@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sidebar Example</title>
+    <title>Main Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -9,91 +9,36 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f8f9fa;
         }
-        #sidebar {
-            height: 100vh;
-            width: 200px;
-            background-color: #343a40; /* Dark grey */
-            position: fixed;
-            top: 0;
-            left: -200px;
-            overflow-x: hidden;
-            transition: left 0.3s ease;
+        .page-links {
+            max-width: 600px;
+            margin: 0 auto;
         }
-        #sidebar.open {
-            left: 0;
-        }
-        #sidebar a {
-            padding: 10px 15px;
+        .page-link {
             display: block;
-            text-decoration: none;
-            color: #fff; /* White text */
-        }
-        #sidebar a:hover {
-            background-color: #495057; /* Darker grey on hover */
-        }
-        #content {
-            margin-left: 0;
-            padding: 20px;
-            transition: margin-left 0.3s ease;
-        }
-        @media (min-width: 768px) {
-            #sidebar {
-                left: 0;
-            }
-            #content {
-                margin-left: 200px;
-            }
-        }
-        iframe {
-            border: none;
-            width: 100%;
-            height: calc(100vh - 40px);
-        }
-        /* Colors for the page header */
-        h1 {
-            color: #343a40; /* Dark grey */
-        }
-        /* Colors for the "Menu" button */
-        .menu-btn {
-            background-color: #343a40; /* Dark grey */
-            color: #fff; /* White text */
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            display: block;
-            text-align: center;
-            font-size: 16px;
+            padding: 10px;
             margin-bottom: 10px;
+            background-color: #343a40;
+            color: #fff;
+            text-decoration: none;
         }
-        .menu-btn:hover {
-            background-color: #495057; /* Darker grey on hover */
+        .page-link:hover {
+            background-color: #495057;
         }
     </style>
 </head>
 <body>
-    <div id="sidebar">
-        <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
-        <a href="home.html" target="content">Home</a>
-        <a href="about.html" target="content">About</a>
-        <a href="contact.html" target="content">Contact</a>
-    </div>
-
-    <div id="content">
-        <iframe name="content" src="home.html"></iframe>
+    <div class="page-links">
+        <a href="home.html" class="page-link">Home</a>
+        <a href="about.html" class="page-link">About</a>
+        <a href="contact.html" class="page-link">Contact</a>
     </div>
 
     <!-- Bootstrap JS and jQuery (needed for Bootstrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("open");
-        }
-    </script>
 </body>
 </html>
